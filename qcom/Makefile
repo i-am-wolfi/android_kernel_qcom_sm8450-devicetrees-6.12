@@ -194,6 +194,25 @@ waipio-overlays-dtb-$(CONFIG_ARCH_WAIPIO) += $(WAIPIO_BOARDS) $(WAIPIO_BASE_DTB)
 
 dtb-y += $(waipio-dtb-y) $(waipio-overlays-dtb-y)
 
+DIWALI_BASE_DTB += diwali.dtb diwalip.dtb diwali-lte.dtb diwali-hsp.dtb
+DIWALI_BOARDS += \
+		diwali-rumi-overlay.dtbo \
+		diwali-idp-overlay.dtbo \
+		diwali-atp-overlay.dtbo \
+		diwali-qrd-overlay.dtbo \
+		diwali-idp-amoled-overlay.dtbo \
+		diwali-idp-usbc-overlay.dtbo \
+		diwali-idp-hsp-overlay.dtbo \
+		diwali-idp-nopmi-overlay.dtbo \
+		diwali-qrd-nopmi-overlay.dtbo \
+		diwali-qrd-pm8350b-overlay.dtbo
+
+diwali-dtb-$(CONFIG_ARCH_DIWALI) += \
+	$(call add-overlays, $(DIWALI_BOARDS) ,$(DIWALI_BASE_DTB))
+diwali-overlays-dtb-$(CONFIG_ARCH_DIWALI) += $(DIWALI_BOARDS) $(DIWALI_BASE_DTB)
+
+dtb-y += $(diwali-dtb-y) $(diwali-overlays-dtb-y)
+
 MALABAR_BASE_DTB += malabar.dtb malabar-4gb.dtb
 MALABAR_APQ_BASE_DTB += malabarp.dtb
 

@@ -1,8 +1,3 @@
-// SPDX-License-Identifier: BSD-3-Clause
-/*
- * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
- */
-
 &soc {
 	/* CAM_CC GDSCs */
 	cam_cc_bps_gdsc: qcom,gdsc@ad10004 {
